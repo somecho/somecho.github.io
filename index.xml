@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Somē Cho - Projects</title>
+    <link>http://example.org/</link>
+    <description>Recent content on Somē Cho - Projects</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 17 Mar 2020 20:17:38 +0100</lastBuildDate><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Polymetro - a PWA metronome</title>
+      <link>http://example.org/posts/polymetro/</link>
+      <pubDate>Tue, 17 Mar 2020 20:17:38 +0100</pubDate>
+      
+      <guid>http://example.org/posts/polymetro/</guid>
+      <description>Polymetro is a polyrhythmic metronome built as a PWA using Vue for the frontend and Web Audio as the sound engine.</description>
+    </item>
+    
+  </channel>
+</rss>

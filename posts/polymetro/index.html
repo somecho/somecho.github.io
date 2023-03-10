@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>Polymetro - a PWA metronome | Somē Cho - Projects</title>
+
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
+<meta name="viewport" content="width=device-width,minimum-scale=1">
+<meta name="description" content="Polymetro is a polyrhythmic metronome built as a PWA using Vue for the frontend and Web Audio as the sound engine.">
+<meta name="generator" content="Hugo 0.80.0" />
+
+
+  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+
+
+
+
+
+
+
+  </head>
+
+  <body>
+    <nav class="navigation">
+	
+		<a href="/"> <span class="arrow">←</span>Home</a>
+	
+	<a href="/posts">Archive</a>
+	<a href="/about">About</a>
+
+	
+
+	
+</nav>
+
+
+    <main class="main">
+      
+
+<section id="single">
+    <h1 class="title">Polymetro - a PWA metronome</h1>
+
+    <div class="tip">
+        <time datetime="2020-03-17 20:17:38 &#43;0100 CET">Mar 17, 2020</time>
+        <span class="split">
+          ·
+        </span>
+        <span>
+          408 words
+        </span>
+        <span class="split">
+          ·
+        </span>
+        <span>
+          2 minute read
+        </span>
+    </div>
+
+    
+    
+        
+  
+    <aside class="toc">
+      <details>
+          <summary>Table of Contents
+          </summary>
+          <div>
+              <nav id="TableOfContents">
+  <ul>
+    <li><a href="#background">Background</a></li>
+    <li><a href="#development">Development</a></li>
+    <li><a href="#the-metronome">The metronome</a></li>
+    <li><a href="#thoughts">Thoughts</a></li>
+  </ul>
+</nav>
+          </div>
+      </details>
+    </aside>
+  
+
+
+    
+
+
+    <div class="content">
+      <p><p class="markdown-image">
+  <img src="/images/polymetro/overview.png" alt=""  />
+</p></p>
+<p><a href="https://polymetro.netlify.app" target="_blank" rel="noopener">Polymetro</a> is a polyrhythmic metronome built as
+a PWA using Vue for the frontend and Web Audio as the sound engine. The app can
+only be accessed via mobile. <a href="https://github.com/somecho/polymetro-2" target="_blank" rel="noopener">Source code here.</a></p>
+<h2 id="background">Background <a href="#background" class="anchor">🔗</a></h2><p>I designed and developed Polymetro in March of 2020, when I was learning Magnus
+Lindberg&rsquo;s Twine. The piece is filled with polyrhythms, many of which I have
+never encountered before.</p>
+<p><p class="markdown-image">
+  <img src="/images/polymetro/twine.png" alt=""  />
+</p></p>
+<p>In order to learn these rhythms, it was necessary to <em>flatten</em> the polyrhythm
+into one composite rhythm and subsequently learn it as a chunk. This wasn&rsquo;t
+always easy when faced with a dense rhythm, like 9 against 8. To easy this
+process for myself, I set out to create Polymetro.</p>
+<h2 id="development">Development <a href="#development" class="anchor">🔗</a></h2><p>The idea was to have a digital metronome that could play both single rhythms and
+polyrhythms. Setting the desired metrum, the pulse grid would adjust itself to
+visually show the number of beats per cycle.</p>
+<p><p class="markdown-image">
+  <img src="/images/polymetro/pulsegrid.png" alt=""  />
+</p></p>
+<p>Each glyph in the pulse grid could be toggled by tapping on it, cycling between
+three states: strong, weak and silent.</p>
+<p>The metronome is also trilingual. Clicking on the settings, a modal will appear
+with the option to select between English, German and Chinese.</p>
+<h2 id="the-metronome">The metronome <a href="#the-metronome" class="anchor">🔗</a></h2><p>The sounds of the metronome are synthesized in realtime using Web Audio using
+square waves with a sharp attack and decay. This was out of personal preference,
+as I found sharp digital clicks to be most effective for my own practicing
+habits. The strong and weak pulses of the two metronomes in polyrhythmic mode
+have different pitches to help differentiate between rhythms.</p>
+<p><p class="markdown-image">
+  <img src="/images/polymetro/scheduler.png" alt=""  />
+</p></p>
+<p>The audio timeline has a simple structure. Every time the play button is
+activated, two separate <code>setTimeout</code> events are triggered, each with its own
+time interval. When the stop button is triggered, all <code>setTimeout</code> events are cleared.</p>
+<h2 id="thoughts">Thoughts <a href="#thoughts" class="anchor">🔗</a></h2><p>The browser&rsquo;s <code>setTimeout</code> event is not reliable, as the browser only tries to
+execute the callback when the thread is free. This means that overtime, the two
+metronomes can end up out of sync. A better design would be to have a single
+<code>setTimeout</code> timeline that has intervals that are smaller, where both rhythms
+fit and have the sounds be played when they&rsquo;re up next.</p>
+<p>Some other smaller improvements would be to implement different metronome sounds
+for those that might find the square wave click to be too sharp. Seeing as the
+particular sound of a metronome is a huge deciding factor for whether musicians
+use them, this may well be worth implementing!</p>
+
+    </div>
+
+    
+    
+    
+
+</section>
+
+
+    </main>
+    
+    <footer id="footer">
+    
+
+    <div class="copyright">
+    
+       © Copyright 
+       2023 
+       <span class="split">
+        <svg fill="#bbbbbb" width="15" height="15" version="1.1" id="heart-15" xmlns="http://www.w3.org/2000/svg" width="15px" height="15px" viewBox="0 0 15 15">
+  <path d="M13.91,6.75c-1.17,2.25-4.3,5.31-6.07,6.94c-0.1903,0.1718-0.4797,0.1718-0.67,0C5.39,12.06,2.26,9,1.09,6.75&#xA;&#x9;C-1.48,1.8,5-1.5,7.5,3.45C10-1.5,16.48,1.8,13.91,6.75z"/>
+</svg>
+       </span>
+       
+    
+    </div>
+
+    
+    
+</footer>
+
+
+
+  </body>
+</html>
