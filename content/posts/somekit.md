@@ -1,5 +1,5 @@
 ---
-title: "Somekit - Clojure(Script) Toolkit"
+title: "🧰 Somekit - Clojure(Script) Toolkit"
 date: 2023-01-23T11:18:26+01:00
 summary: "A collection of multipurpose utility functions for creative coding in Clojure(Script)."
 tags: ["Clojure","ClojureScript"]

@@ -1,5 +1,5 @@
 ---
-title: "OfxJFA - OpenFrameworks Jump Flooding addon"
+title: "🧩 OfxJFA - OpenFrameworks Jump Flooding addon"
 date: 2021-02-19T10:54:07+01:00
 summary: "ofxJFA is an OpenFrameworks addon of the Jump Flooding algorithm implemented with GLSL shaders."
 tags: ["C++","OpenFrameworks","GLSL","OpenGL"]

@@ -1,5 +1,5 @@
 ---
-title: "WebAudio externals for KotlinJS"
+title: "🔊 WebAudio externals for KotlinJS"
 date: 2021-05-27T10:44:41+01:00
 summary: "A growing set of KotlinJS externals for the WebAudio API."
 showTOC: "true"

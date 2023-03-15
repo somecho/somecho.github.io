@@ -1,5 +1,5 @@
 ---
-title: "HiKS - Generative Design Tool"
+title: "🎴 HiKS - Generative Design Tool"
 date: 2022-09-06T09:31:32+01:00
 summary: "HiKS is a generative design tool developed and designed for the Swedish platform HiKS - Hitta Kliniska Studier. It was designed in collaboration with Swedish design firm BBDO Nordics."
 showTOC: true

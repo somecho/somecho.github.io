@@ -1,5 +1,5 @@
 ---
-title: "OfxSwatch - OpenFrameworks Color Palette addon"
+title: "🎨 OfxSwatch - OpenFrameworks Color Palette addon"
 date: 2021-03-30T11:21:53+01:00
 summary: "A texture-based color gradient and palette generator addon for OpenFrameworks."
 tags: ["C++","OpenFrameworks","GLSL"]
