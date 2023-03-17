@@ -32,7 +32,7 @@ developer and for opportunities to work as part of a team with the passion of bu
 
 ## Autobiographical details 
 
-I'm a nonbinary Malaysian born and raised in Brunei, living in Germany
+I'm a Malaysian born and raised in Brunei, living in Germany
 since 2014. I live with my loving partner in Saarbrücken. 
 
 
