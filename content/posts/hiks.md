@@ -7,10 +7,10 @@ tags: ["Vue","JavaScript","Tailwind","p5.js","matter.js","WASM","electron","WebG
 ---
 
 HiKS is a generative design tool developed and designed for the Swedish platform
-HiKS - Hitta Kliniska Studier. It was designed in collaboration with Swedish
-design firm BBDO Nordics. The tool features a stylized simulation of cells in a
-petri dish and was created using Vue(UI), Tailwind(CSS),
-[p5.js](https://p5s.org) + WebGL (graphics) and
+HiKS - Hitta Kliniska Studier, which makes clinical studies searchable. It was
+designed in collaboration with Swedish design firm BBDO Nordics. The tool
+features a stylized simulation of cells in a petri dish and was created using
+Vue(UI), Tailwind(CSS), [p5.js](https://p5s.org) + WebGL (graphics) and
 [matter.js](https://brm.io/matter-js) (soft body physics). The [WASM library
 h264-mp4-encoder](https://github.com/TrevorSundberg/h264-mp4-encoder) was used
 for in-app creation of high quality mp4 output. The HiKS tool was then
