@@ -1,5 +1,6 @@
 ---
-title: "🥣 Tan Bone - an art installation companion web app"
+title: "Tan Bone - an art installation companion web app"
+emoji: "🥣"
 date: 2021-02-05T14:14:43+01:00
 summary: "Tan Bone is an art installation by LiLi (KSA) and Joshua Weitzel for which I developed a companion web application."
 tags: ["Vue","JavaScript","p5.js","howler.js"]

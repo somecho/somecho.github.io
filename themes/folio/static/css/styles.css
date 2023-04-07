@@ -1,0 +1,67 @@
+* {
+  font-family: "Inter", sans-serif;
+  padding: none;
+  margin: none;
+  box-sizing: border-box;
+}
+
+#circle {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: #CA87FF;
+  left: -300px;
+  top: -300px;
+  border-radius: 600px;
+  z-index: -1;
+}
+
+.link-frame {
+  color:black;
+  text-decoration: none;
+}
+
+.page-body {
+  margin: auto;
+  width: 50vw;
+  min-width: 360px;
+}
+
+.page-title {
+  font-size: 4em;
+  margin-left: 5vw;
+  margin: 10vh 10vw 0.1em 5vw; 
+}
+
+.page-subtitle {
+  font-weight: 100;
+  margin-top: 0;
+  margin-left: 5vw;
+}
+
+.post-summary {
+  margin: 1.5em 0;
+}
+
+.post-summary-body {
+  display: flex;
+}
+
+.post-summary-content {
+  margin-top: 0.3em;
+}
+
+.post-summary-emoji {
+  margin-right: 1.0em;
+}
+
+.post-summary-title {
+  transition: 0.25s;
+}
+.post-summary-title:hover {
+  text-decoration: underline crimson solid;
+  transition: 0.25s;
+  color: crimson;
+}
+
+

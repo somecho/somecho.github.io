@@ -1,4 +1,7 @@
 baseURL = "https://somecho.github.io/"
 languageCode = "en-us"
-title = "Somē Cho - Projects"
-theme = "mini"
+title = "Somē Cho"
+theme = "folio"
+
+[params]
+  subtitle = "Creative Developer"
