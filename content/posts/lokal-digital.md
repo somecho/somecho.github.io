@@ -1,5 +1,5 @@
 ---
-title: "Lokal/Digital - a machine learning enabled performance"
+title: "Lokal/Digital - Machine Learning enabled performance"
 emoji: "📺"
 date: 2020-08-29T14:40:27+01:00
 showToc: true
