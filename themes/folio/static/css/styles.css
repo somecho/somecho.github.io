@@ -16,6 +16,12 @@
   z-index: -1;
 }
 
+.copyright {
+  text-align: center;
+  color: lightgray;
+  margin: 1em 0;
+}
+
 .img-caption {
   color: lightgray;
   margin-top: -0.25em;
@@ -44,6 +50,7 @@ p {
 
 .page-body {
   margin: auto;
+  margin-top: 4em;
   width: 45vw;
   max-width: 640px;
   min-width: 360px;
@@ -85,6 +92,7 @@ p {
 .post-title {
   font-weight: 400;
   font-size: 2em;
+  margin-top: 0;
 }
 
 .post-year {
