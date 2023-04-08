@@ -3,7 +3,7 @@ title: "Lokal/Digital - a machine learning enabled performance"
 emoji: "📺"
 date: 2020-08-29T14:40:27+01:00
 showToc: true
-tags: ["C++","OpenFrameworks","Python","Machine Learning","Keras","PureData"]
+tags: ["C++","Python","Keras","OpenFrameworks","Machine Learning","PureData"]
 summary: "Lokal/Digital is a interdisciplinary performance combining contemporary dance, free improvisation and live audiovisuals enabled by machine learning. "
 ---
 
@@ -12,7 +12,9 @@ free improvisation and live audiovisuals. The performance was conceptualized in
 collaboration with dancer-choreographer [Evelin
 Stadler](https://atelierhaus-stadler-gerhardt.jimdo.com/atelierhaus/stadler). 
 
-![](/images/lokaldigital/hero.JPG)
+{{< image 
+src="/images/lokaldigital/hero.JPG" 
+alt="Somē playing the piano">}}
 
 The performance involved a number of moving parts. For one, Evelin was
 performing in a separate room with various props and was telecasted live onto a

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  {{- partial "head.html" . -}}
+  <body>
+    {{- partial "header.html" . -}}
+    <div class="page-body">
+      <h3 class="post-year">{{ .Date.Format "01/Jan/2006" }}</h3>
+      <h2 class="post-title">{{.Params.emoji}} {{ .Title}}</h2>
+      {{.Content}}
+      <hr/>
+      <div class="tags-list">
+        {{ range .Params.tags }}
+        <span class="tag">{{ . }}</span>
+        {{ end }}
+      </div>
+    </div>
+    {{- partial "footer.html" . -}}
+  </body>
+</html>

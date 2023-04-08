@@ -1,13 +1,14 @@
 ---
 title: "Polymetro - a PWA metronome"
-emoji: "🎚"
+emoji: "🥁"
 date: 2020-03-17T20:17:38+01:00
 summary: "Polymetro is a polyrhythmic metronome built as a PWA using Vue for the frontend and Web Audio as the sound engine."
-showToc: true
-tags: ["Vue","WebAudio","PWA","JavaScript"]
+tags: ["Vue","WebAudio","JavaScript","PWA"]
 ---
 
-![](/images/polymetro/overview.png)
+{{< image 
+src="/images/polymetro/overview.png"
+alt="screenshots of mobile interface of polymetro in dark and light mode">}}
 
 [Polymetro](https://polymetro.netlify.app) is a polyrhythmic metronome built as
 a PWA using Vue for the frontend and Web Audio as the sound engine. The app can
@@ -19,7 +20,10 @@ I designed and developed Polymetro in March of 2020, when I was learning Magnus
 Lindberg's Twine. The piece is filled with polyrhythms, many of which I have
 never encountered before.
 
-![](/images/polymetro/twine.png)
+{{< image 
+src="/images/polymetro/twine.png"
+alt="snippet of Magnus Lindberg's twine"
+caption="snippet of Magnus Lindberg's Twine">}}
 
 In order to learn these rhythms, it was necessary to *flatten* the polyrhythm
 into one composite rhythm and subsequently learn it as a chunk. This wasn't
@@ -32,7 +36,10 @@ The idea was to have a digital metronome that could play both single rhythms and
 polyrhythms. Setting the desired metrum, the pulse grid would adjust itself to
 visually show the number of beats per cycle.
 
-![](/images/polymetro/pulsegrid.png)
+{{< image 
+src="/images/polymetro/pulsegrid.png" 
+alt="screenshot of the pulsegrid used in polymetro"
+caption="The pulse grid">}}
 
 Each glyph in the pulse grid could be toggled by tapping on it, cycling between
 three states: strong, weak and silent. 
@@ -48,7 +55,9 @@ as I found sharp digital clicks to be most effective for my own practicing
 habits. The strong and weak pulses of the two metronomes in polyrhythmic mode
 have different pitches to help differentiate between rhythms.
 
-![](/images/polymetro/scheduler.png)
+{{< image 
+src="/images/polymetro/scheduler.png"
+alt="a diagram of the scheduling">}}
 
 The audio timeline has a simple structure. Every time the play button is
 activated, two separate `setTimeout` events are triggered, each with its own
