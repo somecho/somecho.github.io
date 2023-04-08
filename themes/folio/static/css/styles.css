@@ -19,7 +19,8 @@
 .copyright {
   text-align: center;
   color: lightgray;
-  margin: 1em 0;
+  margin-top: 1em;
+  margin-bottom: 5em;
 }
 
 .img-caption {
@@ -127,6 +128,25 @@ p {
 pre {
   padding: 0.5em;
 }
+
+.socials-container {
+  display: flex;
+  justify-items: center;
+  margin-top: 2em;
+}
+.socials-container img {
+  width: 16px;
+  margin: 0.5em;
+}
+
+.socials {
+  margin: auto;
+}
+
+.socials-container a {
+  text-decoration: none;
+}
+
 code, code *{
   font-family: monospace;
 }

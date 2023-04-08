@@ -1,2 +1,18 @@
-
-<footer><div class="copyright">© Somē Cho 2023 </div></footer>
+{{ $git := (dict "url" "https://github.com/somecho" "src" "/icons/github.png")}}
+{{ $masto := (dict "url" "https://tech.lgbt" "src" "/icons/mastodon.png")}}
+{{ $linked := (dict "url" "https://www.linkedin.com/in/some-cho/" "src" "/icons/linkedin.png")}}
+{{ $mail := (dict "url" "mailto:somecho@gmx.de" "src" "/icons/mail.png")}}
+{{ $web := (dict "url" "https://samtsao.com" "src" "/icons/world-wide-web.png")}}
+{{ $socials := slice $git $masto $linked $mail $web}}
+<footer>
+  <div class="socials-container" target="_blank">
+    <div class="socials">
+      {{range $socials}}
+      <a href="{{.url}}">
+        <img src="{{.src}}"/>
+      </a>
+      {{end}}
+    </div>
+  </div>
+  <div class="copyright">© Somē Cho 2023 </div>
+</footer>

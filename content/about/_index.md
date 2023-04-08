@@ -34,11 +34,3 @@ developer and for opportunities to work as part of a team with the passion of bu
 
 I'm a Malaysian born and raised in Brunei, living in Germany
 since 2014. I live with my loving partner in Saarbrücken. 
-
-
-[Github](https://github.com/somecho) /
-[Twitter](https://twitter.com/sam___tsao) /
-[Mastodon](https://tech.lgbt/@some) /
-[Email](mailto:itssomicho@gmail.com) /
-[Website](https://samtsao.com) 
-
