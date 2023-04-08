@@ -4,6 +4,9 @@
   margin: none;
   box-sizing: border-box;
 }
+.back {
+  text-align: right;
+}
 
 #circle {
   position: absolute;
