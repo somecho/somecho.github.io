@@ -37,6 +37,32 @@
   text-decoration: underline crimson solid;
 }
 
+nav {
+  position: absolute;
+  right: calc(5vw - 1em);
+  top: calc(10vh - 0.5em);
+}
+nav a {
+  color: black;
+}
+nav li {
+  font-size: 1.25em;
+  margin: 0.5em 1em;
+}
+nav>ul {
+  display: flex;
+}
+
+
+@media only screen and (max-width: 480px){
+  nav >ul{
+    flex-direction: column;
+  }
+}
+
+li {
+  list-style: none;
+}
 p { 
   line-height: 1.7em;
 }
@@ -113,6 +139,19 @@ code, code *{
 .twitter-tweet-rendered {
   display: block;
   margin: auto;
+}
+.large-tag a {
+  color: white;
+  text-decoration: none;
+}
+.large-tag {
+  color: white;
+  margin: 4px 8px;
+  margin-left: 0;
+  font-size: 12px;
+  background: #FFC75A;
+  border-radius: 16px;
+  padding: 4px 8px;
 }
 
 .tag {
