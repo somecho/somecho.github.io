@@ -1,8 +1,7 @@
 {{ define "main"}}
-<div class="page-body">
+
   {{range .Site.RegularPages}}
   {{.Render "PostSummary"}}
   {{end}}
-</div>
 
 {{end}}

@@ -3,8 +3,8 @@ title: "About"
 date: 2023-03-14T10:37:51+01:00
 ---
 
-## Let me talk about myself
-Hello! I'm Somē. I'm a classically trained pianist and creative developer
+## 👋 Hello! I'm Somē.
+I'm a classically trained pianist and creative developer
 now retraining to chase my dream of becoming a software developer.
 
 Although I have a Masters in New Music Performance, I've always had a connection to

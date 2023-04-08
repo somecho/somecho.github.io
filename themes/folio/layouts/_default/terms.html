@@ -1,15 +1,13 @@
 {{ define "main"}}
-<div class="page-body">
-  <div class="tags-list">
-    {{ range $key, $value := .Data.Terms.ByCount }}
-    <span class="large-tag">
-      <a href="{{ "tags/" |relURL}}{{$value.Name | urlize}}">
-        {{$value.Name}} | 
-        {{ $value.Count}}
-      </a>
-    </span>
-    {{end}}
-  </div>
-
+<h2>Tags</h2>
+<div class="tags-list">
+  {{ range $key, $value := .Data.Terms.ByCount }}
+  <span class="large-tag">
+    <a href="{{ "tags/" |relURL}}{{$value.Name | urlize}}">
+      {{$value.Name}} | 
+      {{ $value.Count}}
+    </a>
+  </span>
+  {{end}}
 </div>
 {{end}}

@@ -1,10 +1,8 @@
 {{ define "main"}}
-<div class="page-body">
-  <h2 style="font-weight: 200;">
-    Projects using {{.Data.Term}}
-  </h2>
-  {{ range .Data.Pages}}
-  {{.Render "PostSummary"}}
-  {{end}}
-</div>
+<h2 style="font-weight: 200;">
+  Projects using {{.Data.Term}}
+</h2>
+{{ range .Data.Pages}}
+{{.Render "PostSummary"}}
+{{end}}
 {{ end}}
