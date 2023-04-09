@@ -1,0 +1,25 @@
+	<div class="post-summary">
+		<div class="post-summary-body">
+			<h3 class="post-summary-emoji">
+				{{.Params.emoji}}
+			</h3>
+			<div class="post-summary-content">
+				<h3 class="post-summary-title">
+					<a class="link-frame" href="{{.Permalink }}">
+						{{ .Title }}
+					</a>
+				</h3>
+				<div class="post-year">{{ .Date.Format "2006" }}</div>
+				<div class="tags-list">
+					{{ range .Params.tags }}
+					<span class="tag">
+						<a href="{{"tags/" | relURL }}{{. | urlize }}">
+							{{ . }}
+						</a>
+					</span>
+					{{ end }}
+				</div>
+				<p>{{ .Params.summary }}</p>
+			</div>
+		</div>
+	</div>

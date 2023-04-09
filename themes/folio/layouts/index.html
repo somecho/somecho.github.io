@@ -1,7 +1,7 @@
 {{ define "main"}}
 
-  {{range .Site.RegularPages}}
-  {{.Render "PostSummary"}}
-  {{end}}
+{{range .Site.RegularPages}}
+{{.Render "summary"}}
+{{end}}
 
 {{end}}

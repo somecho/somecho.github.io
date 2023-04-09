@@ -3,7 +3,7 @@
 <div class="tags-list">
   {{ range $key, $value := .Data.Terms.ByCount }}
   <span class="large-tag">
-    <a href="{{ "tags/" |relURL}}{{$value.Name | urlize}}">
+    <a href="{{ absLangURL "tags/" | relURL}}{{$value.Name | urlize}}">
       {{$value.Name}} | 
       {{ $value.Count}}
     </a>

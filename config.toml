@@ -1,7 +1,23 @@
 baseURL = "https://somecho.github.io/"
 languageCode = "en-us"
 title = "Somē Cho"
+subtitle = "Creative Developer"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
+
 theme = "folio"
 
-[params]
-  subtitle = "Creative Developer"
+[languages]
+[languages.en]
+contentDir ='content/english'
+languageName="English"
+weight=1
+[languages.en.params]
+aboutURL = "/en/about"
+
+[languages.de]
+contentDir ='content/deutsch'
+languageName="German"
+weight=2
+[languages.de.params]
+aboutURL = "/de/über-mich"
