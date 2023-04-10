@@ -1,6 +1,7 @@
 {{define "main"}}
 <h3 class="post-year">{{ .Date.Format "01/Jan/2006" }}</h3>
 <h2 class="post-title">{{.Params.emoji}} {{ .Title}}</h2>
+
 {{.Content}}
 <div class="back"><a href="/"><-- home</a></div>
 <hr/>
