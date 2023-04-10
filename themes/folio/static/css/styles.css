@@ -218,3 +218,7 @@ code, code *{
   border-radius: 12px;
   padding: 1px 8px;
 }
+
+sup a {
+	text-decoration: none;
+}

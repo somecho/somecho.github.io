@@ -6,7 +6,6 @@ defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true
 
 theme = "folio"
-
 [languages]
 [languages.en]
 contentDir ='content/english'
