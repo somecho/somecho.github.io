@@ -16,7 +16,7 @@
 				{{ range .Page.AllTranslations}}
 				{{ if eq $curLang (string .Lang)}}
 				<li class="active-lang">
-					<a href="{{.URL}}">{{.Lang}}</a>
+					<a>{{.Lang}}</a>
 				</li>
 				{{else}}
 				<li class="inactive-lang">
