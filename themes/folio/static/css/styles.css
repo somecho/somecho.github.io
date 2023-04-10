@@ -49,7 +49,7 @@
 
 .lang-nav {
 	position: absolute;
-	right: calc(5vw - 0.5em);
+	right: calc(5vw - 0.25em);
 	top: 2vh;
 }
 
@@ -61,13 +61,13 @@
 	text-decoration: inherit;
 	color:inherit;
 }
-.active-lang {
+.inactive-lang {
 	color: #D1D1D1;
 	text-decoration: underline;
 	background: #FAFAFA;
 }
 
-.inactive-lang {
+.active-lang {
 	color: #5C5C5C;
 	background: #EAEAEA;
 }
@@ -75,9 +75,9 @@
   color: black;
 }
 .lang-nav li {
-  margin: 0.5em;
+  margin: 0.25em;
 	padding: 0.2em 0.75em;
-	border-radius: 0.5em;
+	border-radius: 25px;
 }
 
 .navigation li  {
