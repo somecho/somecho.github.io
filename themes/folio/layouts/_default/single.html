@@ -6,7 +6,7 @@
 <hr/>
 <div class="tags-list">
   {{ range .Params.tags }}
-  <span class="tag"><a href="{{"tags/" | relURL}}{{. | urlize}}">{{ . }}</a></span>
+  <span class="tag"><a href="{{"tags/" | relLangURL}}{{. | urlize}}">{{ . }}</a></span>
   {{ end }}
 </div>
 {{ end }}

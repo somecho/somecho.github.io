@@ -46,34 +46,3 @@ three states: strong, weak and silent.
 
 The metronome is also trilingual. Clicking on the settings, a modal will appear
 with the option to select between English, German and Chinese.
-
-## The metronome
-
-The sounds of the metronome are synthesized in realtime using Web Audio using
-square waves with a sharp attack and decay. This was out of personal preference,
-as I found sharp digital clicks to be most effective for my own practicing
-habits. The strong and weak pulses of the two metronomes in polyrhythmic mode
-have different pitches to help differentiate between rhythms.
-
-{{< image 
-src="/images/polymetro/scheduler.png"
-alt="a diagram of the scheduling">}}
-
-The audio timeline has a simple structure. Every time the play button is
-activated, two separate `setTimeout` events are triggered, each with its own
-time interval. When the stop button is triggered, all `setTimeout` events are cleared.
-
-## Thoughts
-
-The browser's `setTimeout` event is not reliable, as the browser only tries to
-execute the callback when the thread is free. This means that overtime, the two
-metronomes can end up out of sync. A better design would be to have a single
-`setTimeout` timeline that has intervals that are smaller, where both rhythms
-fit and have the sounds be played when they're up next. 
-
-Some other smaller improvements would be to implement different metronome sounds
-for those that might find the square wave click to be too sharp. Seeing as the
-particular sound of a metronome is a huge deciding factor for whether musicians
-use them, this may well be worth implementing!
-
-

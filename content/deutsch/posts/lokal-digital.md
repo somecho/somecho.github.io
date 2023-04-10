@@ -1,94 +1,90 @@
 ---
-title: "Lokal/Digital - Machine Learning enabled performance"
+title: "Lokal/Digital - Performance mit Machine Learning"
 emoji: "📺"
 date: 2020-08-29T14:40:27+01:00
-showToc: true
 tags: ["C++","Python","Keras","OpenFrameworks","Machine Learning","PureData"]
-summary: "Lokal/Digital is a interdisciplinary performance combining contemporary dance, free improvisation and live audiovisuals enabled by machine learning. "
+summary: "Lokal/Digital ist eine interdisziplinäre Performance, die zeitgenössischen Tanz, freie Improvisation und Live-Audiovisuals durch den Einsatz von Machine Learning kombiniert."
 ---
 
-Lokal/Digital is a interdisciplinary performance combining contemporary dance,
-free improvisation and live audiovisuals. The performance was conceptualized in
-collaboration with dancer-choreographer [Evelin
-Stadler](https://atelierhaus-stadler-gerhardt.jimdo.com/atelierhaus/stadler). 
+Lokal/Digital ist eine interdisziplinäre Performance, die zeitgenössischen
+Tanz, freie Improvisation und Live-Audiovisuelles kombiniert. Die Performance
+wurde in Zusammenarbeit mit der Tänzerin und Choreografin [Evelin
+Stadler](https://atelierhaus-stadler-gerhardt.jimdo.com/atelierhaus/stadler)
+konzipiert.
 
 {{< image 
 src="/images/lokaldigital/hero.JPG" 
-alt="Somē playing the piano">}}
+alt="Somē spielt Klavier">}}
 
-The performance involved a number of moving parts. For one, Evelin was
-performing in a separate room with various props and was telecasted live onto a
-screen on stage. In the main stage hall, I improvised on the piano,
-manipulating in realtime electronic effects of the soundfeed while a visual
-projection reacts to my playing. 
+Die Performance beinhaltete verschiedene Elemente. Zum einen trat Evelin mit
+verschiedenen Requisiten in einem separaten Raum auf und wurde live auf eine
+Leinwand auf der Bühne übertragen. Auf der Bühne improvisierte ich am Klavier
+und manipulierte in Echtzeit elektronische Effekte des Klangs, während eine
+visuelle Projektion auf mein Spiel reagierte.
 
 {{< video "/videos/lokaldigital/physarum-test.mp4" "perf" >}}
 
-This article is mainly about the visual aspect of the performance.
+Dieser Artikel handelt hauptsächlich von dem visuellen Aspekt der Performance.
 
-## The visuals
+## Das Visuals
 
+Die Live-Visualisierungen bestanden aus zwei Teilen:
+- Eine OpenFrameworks-Anwendung, die eine stilisierte Physarum-Simulation ausführte.
+- 8 neuronale Netze, die parallel liefen, mein Spiel über PureData hörten und die Simulation kontrollierten.
 
-The live visual projections consisted of two parts: 
-- an OpenFrameworks application running a stylized physarum simulation
-- 8 neural networks running in parallel, listening to my playing via PureData
-  and controlling the simulation
-  
 {{< tweet 1100809319136804864 >}} 
 
-The idea for using a physarum simulation was inspired by artist [Sage
-Jenson](https://www.sagejenson.com), who wrote [a comprehensive article](https://cargocollective.com/sagejenson/physarum) about
-implementing the simulation. I found the visual expression of physarum to be
-particularly suiting to our performance and developed [my own implementation](https://github.com/somecho/openframeworks-physarum) in OpenFrameworks.
+Die Idee, eine Physarum-Simulation zu verwenden, wurde von der Künstler_in [Sage
+Jenson](https://www.sagejenson.com) inspiriert, die einen [umfassenden
+Artikel](https://cargocollective.com/sagejenson/physarum) über die
+Implementierung der Simulation geschrieben hat. Ich fand den visuellen Ausdruck
+von Physarum besonders passend für unsere Performance und entwickelte [meine
+eigene Implementierung](https://github.com/somecho/openframeworks-physarum) in
+OpenFrameworks.
 
-## An octet of neural networks
+## Ein Oktett von neuronalen Netzen
 
+Der Grund, warum es 8 neuronale Netzwerke gibt, besteht darin, dass jedes
+Netzwerk einen separaten Parameter in der Physarum-Anwendung steuern kann. Die
+freigegebenen Parameter sind:
 
-The reason there are 8 neural networks is so that each one can control a
-separate parameter in the physarum application. The parameters exposed for
-control are: 
-- the number of directions a particle can look at
-- the amount of deposit it leaves behind 
-- a particle's max speed 
-- the max force that can be applied on a particle 
-- the decay rate of the deposit trails
-- how far ahead a particle can sense 
-- how steep the difference of the trails should be 
-- the size of the displacement of the trails 
+- Die Anzahl der Richtungen, in die sich ein Teilchen umschauen kann
+- Die Menge an hinterlassener Ablagerung
+- Die maximale Geschwindigkeit eines Teilchens
+- Die maximale Kraft, die auf ein Teilchen angewendet werden kann
+- Die Abbaugeschwindigkeit der Ablagerungsspuren
+- Wie weit ein Teilchen voraussehen kann
+- Wie steil der Unterschied der Spuren sein soll
+- Die Größe der Verschiebung der Spuren
 
-The networks control these parameters separately, like an ensemble, to change
-the visual expression of the physarum in realtime. 
+Die Netzwerke steuern diese Parameter separat wie ein Ensemble, um die visuelle
+Ausdrucksweise der Physarum in Echtzeit zu verändern.
 
-## Training the networks
+## Training
 
 {{< video "/videos/lokaldigital/physarum-train.mp4" "train1" >}}
 
-The networks are trained on recordings of my own playing. I created a PureData
-patch that analyzes my playing, which recorded the analyses as a CSV file. The
-analysis outputs the following features:
+Die Netzwerke sind auf Aufnahmen meines eigenen Spielens
+[trainiert](https://github.com/somecho/lokal-digital/blob/master/notebooks/csvtonumpy2.ipynb).
+Ich habe einen PureData-Patch erstellt, der mein Spiel analysiert und die
+Analysen als CSV-Datei aufzeichnet. Die Analyse liefert die folgenden Merkmale:
 
-- 37 Mel-frequency cepstral coefficients
-- onset amount
-- Average RMS level
-- Spectral Centroid
-- Spectral Irregularity
-- Spectral Speed
-- Spectral Brightness
-- Harmonicity
-- Spectral Skew
+- 37 Mel-Frequenz-Cepstral-Koeffizienten
+- Onset Anzahl
+- Durchschnittlicher RMS-Pegel
+- Spektralzentrum
+- Spektrale Unregelmäßigkeit
+- Spektrale Geschwindigkeit
+- Spektrale Helligkeit
+- Harmonizität
+- Spektrale Schiefe
 
-The notebook used to train the networks can be found
-[here](https://github.com/somecho/lokal-digital/blob/master/notebooks/csvtonumpy2.ipynb). Disclaimer: the repo contains
-almost no structure and proper filenaming. It was developed before I knew what
-best practices were!
-
-
-## Realtime Setup
+## Setup
 
 {{< video "/videos/lokaldigital/physarum-train-2.mp4" "train2" >}}
 
-A [python
-script](https://github.com/somecho/lokal-digital/blob/master/lokaldigital.py)
-ran an OSC server in realtime, listening to live input from the PureData patch,
-passing it to the neural network for predictions and then sending the result
-directly to the physarum application. 
+Ein OSC-Server, der Live-Inputs von der PureData-Patch empfangen hat, wurde mit
+einem
+[Python-Skript](https://github.com/somecho/lokal-digital/blob/master/lokaldigital.py)
+in Echtzeit ausfgeführt. Diese Inputs wurden an das neuronale Netzwerk zur
+Vorhersage weitergeleitet und dann direkt an die Physarum-Anwendung gesendet.

@@ -2,29 +2,29 @@
 title: "OfxJFA - OpenFrameworks Jump Flooding addon"
 emoji: "🧩"
 date: 2021-02-19T10:54:07+01:00
-summary: "ofxJFA is an OpenFrameworks addon of the Jump Flooding algorithm implemented with GLSL shaders."
+summary: "OfxJFA ist ein OpenFrameworks Addon von dem mit GLSL-Shadern implementierten Jump Flooding-Algorithmus."
 tags: ["C++","OpenGL","GLSL","OpenFrameworks"]
 ---
 
 
 {{< image 
 src="https://user-images.githubusercontent.com/26333602/108489927-6fbf2b80-72a2-11eb-946b-d081ad984988.png"
-alt="a voronoi diagram colored by jumpflooding" 
-caption="color map of jump flood output">}}
+alt="ein von Jump Flooding eingefärbtes Voronoi-Diagramm" 
+caption="Farbzuordnung nach Jump Flooding">}}
 
-[OfxJFA](https://github.com/somecho/ofxJFA) is an addon for the C++ creative
-coding framework [OpenFrameworks](https://openframeworks.cc) of the
-Jump Flooding algorithm implemented with GLSL shaders. The Jump Flooding algorithm
-is a method of constructing [Voronoi
-diagrams](https://en.wikipedia.org/wiki/Voronoi_diagram) by encoding the
-distance and ID of the closest seed in a texture for every pixel. This addon
-follows the description of implementation by [this article by Ryan Kaplan](https://www.rykap.com/graphics/skew/2016/02/25/voronoi-diagrams/).
+[OfxJFA](https://github.com/somecho/ofxJFA) ist ein Addon für das
+C++ Framework OpenFrameworks des Jump Flooding-Algorithmus, der mit
+GLSL-Shadern implementiert wurde. Der Jump Flooding-Algorithmus ist eine
+Methode zur Konstruktion von Voronoi-Diagrammen, indem die Entfernung und ID
+des nächstgelegenen *Seeds* für jeden Pixel in einer Textur codiert wird. Dieses
+Add-On folgt der Implementierungsbeschreibung in diesem [Artikel von Ryan
+Kaplan](https://www.rykap.com/graphics/skew/2016/02/25/voronoi-diagrams/).
 
-## Using ofxJFA
-Using ofxJFA is as simple as passing an `ofxTexture` to the `update()` method of
-an instance of the `ofxJFA` class. The class then does 11 passes of Jump
-Flooding, writing the output each time to an `RGBA32F` texture and returns it in
-the end.
+## Verwendung ofxJFA
+Die Verwendung von ofxJFA ist so einfach wie das Übergeben einer `ofxTexture` an
+die `update()`-Methode einer Instanz der Klasse `ofxJFA`. Die Klasse führt dann 11
+Durchgänge des Jump-Flooding-Algorithmus durch, schreibt jedes Mal das Output
+in eine `RGBA32F`-Textur und gibt sie am Ende zurück.
 
 ### Declare and Init
 ```cpp
@@ -33,36 +33,35 @@ the end.
 ofxJfa jfa;
 
 //ofApp.cpp 
-//width and height of source
+//Breite und Höhe der Quelltextur
 jfa.init(1280,720); 
 ```
 ### Update 
 ```cpp
 //ofApp.cpp
 
-//pass in source texture
-jfa.update(sourceTexture); 
+//Quelltextur eingeben
+jfa.update(tex); 
 ```
 
-## Using the output
-The output of this addon is a JFA encoding, where the XY coordinates to the
-nearest seed is recorded in the red and green channels of the texture and the
-distance to it in the blue channel. 
+## Verwendung des Outputs 
+Das Output dieses Add-ons ist eine JFA-Kodierung, bei der die XY-Koordinaten
+zum nächstgelegenen Seed in den roten und grünen Kanälen der Textur und die
+Entfernung dazu im blauen Kanal aufgezeichnet werden.
 
-The texture can then be used in another shader for other purposes.
+Die Textur kann dann in einem anderen Shader für andere Zwecke verwendet werden.
 ```cpp
 //ofApp.cpp
 
-// passing the texture into another shader
+// Texture in einen anderen Shader geben
 shader.setUniformTexture("jfa", jfa.getTexture(), 0);
-shader.setUniformTexture("src", sourceTexture(), 1);
+shader.setUniformTexture("src", tex, 1);
 ```
 ```glsl
 //shader.frag
 
-//get encoded data
+//Kodierung abrufen
 vec4 loc = texture(jfa, gl_FragCoord.xy); 
-//use encoded data to get color data from source
 gl_FragColor = texture(src, loc.xy); 
 ```
 
