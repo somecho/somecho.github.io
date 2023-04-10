@@ -6,25 +6,25 @@
 		<ul>
 			<li><a href="{{absLangURL "" }}">home</a></li>
 			<li><a href="{{ .Site.Params.aboutURL }}">{{ i18n "about" . }}</a></li>
-			<li><a href="{{absLangURL "tags" }}">tags</a></li>
+			<li><a href="{{absLangURL " tags" }}">tags</a></li>
 		</ul>
 	</nav>
 
-		<nav class="lang-nav">
-			<ul>
-				{{$curLang := (string .Page.Lang)}}
-				{{ range .Page.AllTranslations}}
-				{{ if eq $curLang (string .Lang)}}
-				<li class="active-lang">
-					<a>{{.Lang}}</a>
-				</li>
-				{{else}}
-				<li class="inactive-lang">
-					<a href="{{.URL}}">{{.Lang}}</a>
-				</li>
-				{{end }}
-				{{ end }}
-			</ul>
-		</nav>
+	<nav class="lang-nav">
+		<ul>
+			{{$curLang := (string .Page.Lang)}}
+			{{ range .Page.AllTranslations}}
+			{{ if eq $curLang (string .Lang)}}
+			<li class="active-lang">
+				<a>{{.Lang}}</a>
+			</li>
+			{{else}}
+			<li class="inactive-lang">
+				<a href="{{.Permalink}}">{{.Lang}}</a>
+			</li>
+			{{end }}
+			{{ end }}
+		</ul>
+	</nav>
 
 </header>
