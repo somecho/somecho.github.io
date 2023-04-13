@@ -2,8 +2,8 @@
 title: "B.R.A.H.M.S. Explorer"
 date: 2023-03-05T12:56:14+02:00
 draft: false
-summary: "The B.R.A.H.M.S. Explorer is a searchable catalog for contemporary music. It uses React for the frontend, Flask on the backend and Sqlite as a database, running as a Docker Web Service on Render."
-tags: ["React","Flask","Sqlite","Docker","JavaScript","Python","Sql"]
+summary: "The B.R.A.H.M.S. Explorer is a searchable catalog for contemporary music. It uses React for the frontend, Flask on the backend and Sqlite as a database, running as a Web Service on Render."
+tags: ["React","Flask","Sqlite","JavaScript","Python","Sql"]
 emoji: "📇"
 ---
 
@@ -12,8 +12,7 @@ Explorer](https://github.com/somecho/catalog-for-contemporary-music)
 is a searchable catalog for contemporary music with a React frontend
 and a Flask backend. It uses Sqlite as a database with data is scraped
 from [IRCAM's website](https://brahms.ircam.fr/en/). The live application is hosted [on
-Render](https://catalogforcontemporarymusic.onrender.com/) as a Docker
-web service[^1].
+Render](https://catalogforcontemporarymusic.onrender.com/) as web service[^1].
 
 {{< image src="/images/brahms/ui.png" 
 alt="The mobile and desktop user interface"
@@ -49,7 +48,7 @@ caption="the searchbar" >}}
 
 ## Keeping the database updated.
 
-Since the entire catalog runs in a docker container on Render, there is no
+Since the entire catalog runs as a web service on Render, there is no
 persistent memory. If I wanted to keep the database updated, I would have to
 update my Sqlite database locally and push it to github. 
 
