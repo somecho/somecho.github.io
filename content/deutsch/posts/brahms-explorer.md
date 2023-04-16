@@ -1,23 +1,36 @@
 ---
 title: "B.R.A.H.M.S. Explorer"
 date: 2023-03-05T12:56:14+02:00
-summary: "Die B.R.A.H.M.S. Explorer ist ein durchsuchbares Katalog für zeitgenössische Musik. Sie verwendet React für die Benutzeroberfläche, Flask für den Backend und Sqlite als Datenbank und wird als Webservice auf Render ausgeführt."
-tags: ["React","Flask","Sqlite","JavaScript","Python","Sql"]
+summary: "Der B.R.A.H.M.S. Explorer ist ein durchsuchbares Katalog für zeitgenössische Musik, der mit einer Microservices-Architektur entwickelt wurde."
+tags: ["React","Flask","MySQL","JavaScript","Python","Microservices"]
 emoji: "📇"
 ---
 
-[The B.R.A.H.M.S.
-Explorer](https://github.com/somecho/catalog-for-contemporary-music) ist ein
-durchsuchbarer Katalog für zeitgenössische Musik mit einer React-Frontend und
-einem Flask-Backend. Es verwendet Sqlite als Datenbank, deren Daten von
-[IRCAM's Website](https://brahms.ircam.fr/en/) gescraped werden. Die
-Live-Anwendung wird auf
-[Render](https://catalogforcontemporarymusic.onrender.com/) als
-Webservice gehostet[^1].
+[Der B.R.A.H.M.S. Explorer](https://github.com/somecho/brahms-explorer) ist
+ein durchsuchbarer Katalog für zeitgenössische Musik, dessen Daten von der
+[B.R.A.H.M.S.-Datenbank](https://brahms.ircam.fr/en/) von IRCAM gescraped
+werden. Die Live-Anwendung kann unter [diesem
+Link](https://brahmsexplorer.onrender.com) besucht werden.
 
 {{< image src="/images/brahms/ui.png"
 alt="Benutzeroberfläche für mobile Geräte und Desktop"
 caption="UI für mobile Geräte und Desktop">}}
+
+Die Anwendung basiert auf einer modularen Microservices-Architektur. Der
+Benutzer interagiert mit einer mit React erstellten Frontend-Anwendung. Alle
+Daten, die das Frontend benötigt, werden über das Backend abgerufen, eine
+Flask-Anwendung, die für die Kommunikation zwischen Frontend und Datenbank
+verantwortlich ist. Sowohl Front- als auch Backend werden auf Render gehostet.
+
+{{< image src="/images/brahms/brahms-diagram.de.png"
+alt="Ein Diagramm, das die Beziehung zwischen den Microservices zeigt"
+caption="Beziehung zwischen den Services">}}
+
+Der Sync-Service, eine ebenfalls auf Render gehostete Flask-Anwendung,
+durchsucht IRCAMs Website nach neuen Stücken und aktualisiert die von
+PlanetScale gehostete Datenbank entsprechend. Dieser Service wird durch einen
+Cronjob aktiviert, der auf Vercel gehostet ist und einen API-Endpunkt
+aufruft, um die Synchronisation zu starten.
 
 ## Ziel
 Das ursprüngliche Suchformular auf der Website von IRCAM war überladen mit
@@ -46,17 +59,3 @@ werden.
 {{< image src="/images/brahms/searchbar.png"
 alt="Screenshot der Suchleiste"
 caption="Die Suchleiste" >}}
-
-## Aktualisierung der Datenbank
-Da der gesamte Katalog auf Render als Webservice ausgeführt wird,
-gibt es keinen persistenten Speicher. Wenn ich die Datenbank aktualisieren
-wollte, müsste ich meine Sqlite-Datenbank lokal aktualisieren und auf Github
-pushen.
-
-Die von mir gewählte Lösung war, einen Github-Action zu schreiben, der IRCAM's
-Website wöchentlich scraped, neue Stücke und Komponisten zur Datenbank
-hinzufügt und sie dann ins Repo pushed. Der Webservice auf Render würde dann
-mit diesem neuen Update neu bereitgestellt.
-
-[^1]: Bei Hosting in der kostenlosen Stufe kann die Leistung des Webservices
-	langsam sein.

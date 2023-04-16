@@ -2,21 +2,36 @@
 title: "B.R.A.H.M.S. Explorer"
 date: 2023-03-05T12:56:14+02:00
 draft: false
-summary: "The B.R.A.H.M.S. Explorer is a searchable catalog for contemporary music. It uses React for the frontend, Flask on the backend and Sqlite as a database, running as a Web Service on Render."
-tags: ["React","Flask","Sqlite","JavaScript","Python","Sql"]
+summary: "The B.R.A.H.M.S. Explorer is a searchable catalog for contemporary music built with a microservices architecture."
+tags: ["React","Flask","MySQL","JavaScript","Python","Microservices"]
 emoji: "📇"
 ---
 
-[The B.R.A.H.M.S.
-Explorer](https://github.com/somecho/catalog-for-contemporary-music)
-is a searchable catalog for contemporary music with a React frontend
-and a Flask backend. It uses Sqlite as a database with data is scraped
-from [IRCAM's website](https://brahms.ircam.fr/en/). The live application is hosted [on
-Render](https://catalogforcontemporarymusic.onrender.com/) as web service[^1].
+[The B.R.A.H.M.S. Explorer](https://github.com/somecho/brahms-explorer) is a
+searchable catalog for contemporary music with data scraped from IRCAM's
+[B.R.A.H.M.S. database](https://brahms.ircam.fr/en/). See [the live
+application](https://brahmsexplorer.onrender.com).
 
 {{< image src="/images/brahms/ui.png" 
 alt="The mobile and desktop user interface"
 caption="The mobile and desktop user interface">}}
+
+## Architecture
+
+The application is built using a modular microservices architecture. The user
+interacts with a frontend built with React. All the data that the frontend
+needs, it gets via the backend, a Flask application responsible for
+communicating between the frontend and the database. Both front and backends
+are hosted on Render.
+
+{{< image src="/images/brahms/brahms-diagram.en.png" 
+alt="A diagram showing the relationship between the microservices"
+caption="Relationship between the services">}}
+
+The sync service, a Flask application also hosted on Render, scrapes IRCAM's
+website for new pieces and updates the PlanetScale-hosted database accordingly.
+This service is activated by a cron job hosted on Vercel, which hits an
+API-endpoint to start the synchronisation.
 
 ## Goal
 
@@ -45,17 +60,3 @@ sorted in ascending or descending order.
 {{< image src="/images/brahms/searchbar.png"
 alt="screenshot of searchbar"
 caption="the searchbar" >}}
-
-## Keeping the database updated.
-
-Since the entire catalog runs as a web service on Render, there is no
-persistent memory. If I wanted to keep the database updated, I would have to
-update my Sqlite database locally and push it to github. 
-
-The solution I opted for was to write a Github Action that scrapes IRCAM's
-website weekly, adds new pieces and composers to the database and then pushing
-it to repo. The web service on Render would then redeploy with this new update.
-
-
-[^1]: With free tier hosting, the performance of the web service may
-	be slow.
