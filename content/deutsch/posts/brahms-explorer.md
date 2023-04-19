@@ -16,21 +16,21 @@ Link](https://brahmsexplorer.onrender.com) besucht werden.
 alt="Benutzeroberfläche für mobile Geräte und Desktop"
 caption="UI für mobile Geräte und Desktop">}}
 
-Die Anwendung basiert auf einer modularen Microservices-Architektur. Der
+## Architektur
+
+Die Anwendung ist mit einer modularen Komponentarchitektur aufgebaut. Der
 Benutzer interagiert mit einer mit React erstellten Frontend-Anwendung. Alle
 Daten, die das Frontend benötigt, werden über das Backend abgerufen, eine
 Flask-Anwendung, die für die Kommunikation zwischen Frontend und Datenbank
 verantwortlich ist. Sowohl Front- als auch Backend werden auf Render gehostet.
 
-{{< image src="/images/brahms/brahms-diagram.de.png"
+{{< image src="/images/brahms/diagram.de.png"
 alt="Ein Diagramm, das die Beziehung zwischen den Microservices zeigt"
 caption="Beziehung zwischen den Services">}}
 
-Der Sync-Service, eine ebenfalls auf Render gehostete Flask-Anwendung,
-durchsucht IRCAMs Website nach neuen Stücken und aktualisiert die von
-PlanetScale gehostete Datenbank entsprechend. Dieser Service wird durch einen
-Cronjob aktiviert, der auf Vercel gehostet ist und einen API-Endpunkt
-aufruft, um die Synchronisation zu starten.
+Um immer auf dem neuesten Stand der Daten von IRCAM zu bleiben, wird täglich
+automatisch eine Github-Aktion gestartet, die die Datenbank synchronisiert. Das
+bedeutet, dass die Informationen in der Anwendung immer aktuell sind.
 
 ## Ziel
 Das ursprüngliche Suchformular auf der Website von IRCAM war überladen mit

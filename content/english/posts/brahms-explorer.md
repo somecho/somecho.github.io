@@ -18,20 +18,18 @@ caption="The mobile and desktop user interface">}}
 
 ## Architecture
 
-The application is built using a modular microservices architecture. The user
+The application is built with a modular component architecture. The user
 interacts with a frontend built with React. All the data that the frontend
 needs, it gets via the backend, a Flask application responsible for
 communicating between the frontend and the database. Both front and backends
 are hosted on Render.
 
-{{< image src="/images/brahms/brahms-diagram.en.png" 
+{{< image src="/images/brahms/diagram.en.png" 
 alt="A diagram showing the relationship between the microservices"
 caption="Relationship between the services">}}
 
-The sync service, a Flask application also hosted on Render, scrapes IRCAM's
-website for new pieces and updates the PlanetScale-hosted database accordingly.
-This service is activated by a cron job hosted on Vercel, which hits an
-API-endpoint to start the synchronisation.
+Finally, to keep updated with the latest data from IRCAM, a Github
+Action is scheduled daily to synchronise the database.
 
 ## Goal
 
