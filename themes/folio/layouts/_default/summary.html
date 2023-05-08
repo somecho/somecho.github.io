@@ -5,7 +5,9 @@
 			</h3>
 			<div class="post-summary-content">
 				<h3 class="post-summary-title">
-					<a class="link-frame" href="{{.Permalink }}">
+					{{ $link := .Permalink}}
+					{{ if isset .Params "github" }} {{ $link = .Params.github  }} {{ end }}
+					<a class="link-frame" href="{{ $link }}">
 						{{ .Title }}
 					</a>
 				</h3>
