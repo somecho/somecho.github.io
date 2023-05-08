@@ -1,7 +1,7 @@
 baseURL = "https://somecho.github.io/"
 languageCode = "en-us"
 title = "Somē Cho"
-subtitle = "Creative Developer"
+subtitle = "Fullstack Developer"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true
 
