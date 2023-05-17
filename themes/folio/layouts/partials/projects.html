@@ -1,0 +1,13 @@
+<section>
+	<h2>{{ i18n "recentproj" . }}</h2>
+	<div class="cards-container">
+	{{range first 3 (where .Site.RegularPages "Section" "projects")}}
+	{{.Render "project-card"}}
+	{{end}}
+	</div>
+	<div style="text-align:right;"> 
+		<a class="hover-link" href={{absLangURL "projects"}}>
+		{{ i18n "seeallprojects" . }} →
+		</a>
+	</div>
+</section>

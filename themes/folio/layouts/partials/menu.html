@@ -1,0 +1,10 @@
+<div class="menu">
+	<nav>
+		<ul>
+			{{ if not .IsHome }} 
+			<li><a href={{absLangURL "/"}} class="hover-link">⌂ {{ i18n "home" . }}</a></li>
+			{{ end }}
+			<li><a href="#footer-nav" class="hover-link">↓ {{ i18n "menu" . }}</a></li>
+		</ul>
+	</nav>
+</div>

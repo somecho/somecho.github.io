@@ -1,7 +1,7 @@
 {{ define "main"}}
 
-{{range .Site.RegularPages}}
-{{.Render "summary"}}
-{{end}}
+{{- partial "headline.html" . -}}
+
+{{- partial "projects.html" . -}}
 
 {{end}}

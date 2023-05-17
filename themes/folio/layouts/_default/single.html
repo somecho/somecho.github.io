@@ -1,13 +1,21 @@
 {{define "main"}}
-<h3 class="post-year">{{  .Date.Format "2 Jan 2006" }}</h3>
-<h2 class="post-title">{{.Params.emoji}} {{ .Title}}</h2>
+<article style="margin: 48px 0">
+	<h3 class="post-year">{{  .Date.Format "02.01.2006" }}</h3>
+	<h2 class="post-title">{{.Params.emoji}} {{ .Title}}</h2>
+	{{ partial "tags-section" .Params.tags }}
 
-{{.Content}}
-<div class="back"><a href="/"><-- home</a></div>
+	{{.Content}}
+</article>
 <hr/>
-<div class="tags-list">
-  {{ range .Params.tags }}
-  <span class="tag"><a href="{{"tags/" | relLangURL}}{{. | urlize}}">{{ . }}</a></span>
-  {{ end }}
+
+{{ $leader := "" }}
+{{ if eq .Page.Type "projects"}} {{ $leader = "seeallprojects"}}{{end}}
+<div style="text-align: right;margin:12px 0;">
+	<a href={{ absLangURL .Page.Type }} class="hover-link">
+		{{ i18n $leader}} →
+	</a>
 </div>
-{{ end }}
+
+
+
+{{end}}

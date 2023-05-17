@@ -1,0 +1,23 @@
+{{ $thumbnail := (print "/thumbnails/" .Params.thumbnail) }}
+{{ $link := .Permalink}}
+{{ if isset .Params "github" }} {{ $link = .Params.github  }} {{ end }}
+
+<div class="card">
+	<div class="card-top">
+		<div class="card-edge top-rounded"></div>
+		<div class="card-thumbnail-container">
+			<img class="card-thumbnail" src={{$thumbnail}} alt="">
+		</div>
+		<div class="card-body">
+			<h4 class="card-title">
+				<a href="{{ $link }}" class="hover-link">
+					{{ .Title }}
+				</a>
+				</h3>
+				<p class="card-summary">
+				{{ .Summary }}
+				</p>
+		</div>
+	</div>
+	<div class="card-edge bottom-rounded"></div>
+</div>

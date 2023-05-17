@@ -4,6 +4,7 @@ title = "Somē Cho"
 subtitle = "Fullstack Developer"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true
+timeZone = "Europe/Berlin"
 
 theme = "folio"
 [languages]

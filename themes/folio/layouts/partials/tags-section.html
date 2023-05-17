@@ -1,0 +1,7 @@
+<div class="tags-section">
+	{{ range .}}
+	<span class="tag">
+		<a href="{{"tags/" | relLangURL}}{{. | urlize}}">{{ upper . }}</a>
+	</span>
+	{{ end }}
+</div>

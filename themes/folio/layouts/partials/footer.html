@@ -1,18 +1,25 @@
-{{ $git := (dict "url" "https://github.com/somecho" "src" "/icons/github.png")}}
-{{ $masto := (dict "url" "https://tech.lgbt/@some" "src" "/icons/mastodon.png")}}
-{{ $linked := (dict "url" "https://www.linkedin.com/in/some-cho/" "src" "/icons/linkedin.png")}}
-{{ $mail := (dict "url" "mailto:somecho@gmx.de" "src" "/icons/mail.png")}}
-{{ $web := (dict "url" "https://samtsao.com" "src" "/icons/world-wide-web.png")}}
-{{ $socials := slice $git $masto $linked $mail $web}}
-<footer>
-  <div class="socials-container" target="_blank">
-    <div class="socials">
-      {{range $socials}}
-      <a href="{{.url}}">
-        <img src="{{.src}}"/>
-      </a>
-      {{end}}
-    </div>
-  </div>
-  <div class="copyright">© Somē Cho 2023 </div>
+<footer id="footer-nav">
+	<div class="footer-link-container"> 
+		<div class="main-links">
+			<ul>
+				<li><a href={{absLangURL ""}}>{{ i18n "home" . }}</a></li>
+				<li><a href={{ .Site.Params.aboutURL }}>{{ i18n "about" . }}</a></li>
+				<li><a href={{ absLangURL "projects" }}>{{ i18n "projects" . }}</a></li>
+			</ul>
+			<ul>
+				{{$curLang := (string .Page.Lang)}}
+				{{ range .Page.AllTranslations}}
+				<li class="">
+					<a href="{{.Permalink}}">{{i18n .Lang .}}</a>
+				</li>
+				{{ end }}
+			</ul>
+		</div>
+
+		<div>
+			<ul>
+				<li><a href="#">↑ {{ i18n "backtop" . }}</a></li>
+			</ul>
+		</div>
+	</div>
 </footer>
