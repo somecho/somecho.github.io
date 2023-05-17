@@ -1,0 +1,16 @@
+{{range .}}
+<div style="margin:24px 0;">
+	<div class="blog-line">
+		<p style="font-weight:200;margin-right:8px";>
+		{{.Date.Format "02.01.2006"}}
+		</p>
+		<h3>
+			<a href={{.Permalink}} class="hover-link">
+				{{.Title}}
+			</a>
+		</h3>
+	</div>
+	<p> {{.Params.subtitle}} </p>
+</div>
+{{end}}
+

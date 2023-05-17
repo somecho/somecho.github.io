@@ -23,7 +23,7 @@ circles in such profundity as I’ve never had in my life.
 With that impulse, I found myself coding every single day and most of the work
 I produced involved circles. I would like to share what I found with you!
 
-## TRAILS
+## Trails
 
 By varying the size and the position of the circle, then drawing it as it
 moves, taking care not to erase its path, the outcome is something that
@@ -55,7 +55,7 @@ It’s a technique that artist Zach Lieberman — who I absolutely revere — us
 By doing so, you don’t end up with a gigantic array of circles and only have to
 deal with a finite number of circles.
 
-## SODDY CIRCLES
+## Soddy Circles
 
 Please don’t ask me who coined the term Soddy Circles. But let me explain it
 anyways. Given three mutually tangent circles — that is, three circles touching
@@ -129,7 +129,7 @@ caption="Interactive soddy circles"
 And lastly, I added some interaction. If you’d like to play with it, [click
 here](http://hic.art/52096)!
 
-## TREES
+## Trees
 
 One technique I explored with circles was the idea of trees. I formulated the
 problem this way:
@@ -174,11 +174,11 @@ caption="Poisson filled"
 
 Doing Poisson fill on it yields satisfyingly smooth gradients. Click the image to see the original one on Instagram as GIF compression kills it!
 
-## OTHER TECHNIQUES
+## Other Techniques
 
 Here are some other circular ideas I tried out.
 
-### SPIROGRAPH
+### Spirograph
 
 Another idea that took me back to my primary school days was the spirograph. One of those mathematical drawing kits where you traced the path of a smaller circle rolling within a larger circle.
 
@@ -190,7 +190,7 @@ caption="spiroplayer"
 
 Fortunately for creative coders, we don’t have to simulate everything so that it represents physical reality! You can tweak how fast the inner circle rotates around its own center as well as how fast it rotates around the larger circle. Varying this yields different patterns. In fact, I made [an interactive version](http://hic.art/59749) where you can do exactly just that!
 
-### PHYSICS
+### Physics
 
 {{< image
 alt="a mouse cursor herding white circles on a black background"
@@ -222,7 +222,7 @@ By varying the spring’s stiffness and damping, you alter the behavior of the c
 
 For the interactive version, [click here.](http://hic.art/102576)
 
-### VERTEX TRANSFORMATIONS
+### Vertex Transformations
 
 This technique is a bit niche, but it’s based on the way the graphics card draws things on the screen — specifically, the way OpenGL draws things on the screen.
 
@@ -242,7 +242,7 @@ caption="Phosphene"
 
 The interactive version can be found [here](http://hic.art/76467).
 
-### WEBBING
+### Webbing
 
 Another reason to think in vertices is webbing!
 
@@ -254,7 +254,7 @@ caption="Webbed circles"
 
 By defining my circles as a set of vertices, I have access to these vertices. I can do maths over them. I can iterate over each vertice and check how close they are to the vertices of other circles. If they are near enough, I draw line.
 
-### DUBIN PATHS
+### Dubin Paths
 
 Dubin paths are a specific kind of curve. Long story short, they can be defined with circles.
 

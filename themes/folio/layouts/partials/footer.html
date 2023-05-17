@@ -1,35 +1,44 @@
 <footer id="footer-nav">
 	<div class="footer-link-container"> 
 		<div class="main-links">
-			<ul>
-				<li><a href="https://github.com/somecho">Github</a></li>
-				<li><a href="https://www.linkedin.com/in/some-cho/">LinkedIn</a></li>
-				<li><a href="https://tech.lgbt/@some">Mastodon</a></li>
-				<li><a href="https://twitter.com/sam___tsao">Twitter</a></li>
-				<li><a href="mailto:somecho@gmx.de">Email</a></li>
-			</ul>
-			<ul>
-				<li><a href={{absLangURL ""}}>{{ i18n "home" . }}</a></li>
-				<li><a href={{ .Site.Params.aboutURL }}>{{ i18n "about" . }}</a></li>
-				<li><a href={{ absLangURL "projects" }}>{{ i18n "projects" . }}</a></li>
-				<li><a href={{ absLangURL "blog" }}>Blog</a></li>
-				<li><a href={{ absLangURL "tags" }}>Tags</a></li>
-			</ul>
-			<ul>
-				{{$curLang := (string .Page.Lang)}}
-				{{ range .Page.AllTranslations}}
-				<li class="">
-					<a href="{{.Permalink}}">{{i18n .Lang .}}</a>
-				</li>
-				{{ end }}
-			</ul>
+			<nav>
+				<ul>
+					<li><a href="https://github.com/somecho">Github</a></li>
+					<li><a href="https://www.linkedin.com/in/some-cho/">LinkedIn</a></li>
+					<li><a href="https://tech.lgbt/@some">Mastodon</a></li>
+					<li><a href="https://twitter.com/sam___tsao">Twitter</a></li>
+					<li><a href="mailto:somecho@gmx.de">Email</a></li>
+				</ul>
+			</nav>
+			<nav>
+				<ul>
+					<li><a href={{absLangURL ""}}>{{ i18n "home" . }}</a></li>
+					<li><a href={{ .Site.Params.aboutURL }}>{{ i18n "about" . }}</a></li>
+					<li><a href={{ absLangURL "projects" }}>{{ i18n "projects" . }}</a></li>
+					<li><a href={{ absLangURL "blog" }}>Blog</a></li>
+					<li><a href={{ absLangURL "tags" }}>Tags</a></li>
+				</ul>
+			</nav>
+			<nav>
+				<ul>
+					{{$curLang := (string .Page.Lang)}}
+					{{ range .Page.AllTranslations}}
+					<li class="">
+						<a href="{{.Permalink}}">{{i18n .Lang .}}</a>
+					</li>
+					{{ end }}
+				</ul>
+			</nav>
 		</div>
 
 		<div>
-			<ul>
-				<li><a href="#">↑ {{ i18n "backtop" . }}</a></li>
-			</ul>
+			<nav>
+				<ul>
+					<li><a href="#">↑ {{ i18n "backtop" . }}</a></li>
+				</ul>
+			</nav>
 		</div>
+
 	</div>
 	<div style="text-align: center; color: white; font-size: 0.8em;margin:24px 0;"> © 2023 Somē Cho </div>
 </footer>

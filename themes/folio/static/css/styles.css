@@ -43,8 +43,11 @@ p {
 .hover-link:hover {
 	text-decoration: underline;
 }
-ul>li{
+nav ul>li{
 	list-style: none;
+}
+article ul {
+	margin: 0 32px;
 }
 
 /* TYPOGRAPHY */
@@ -321,4 +324,13 @@ code, code *{
 
 sup a {
 	text-decoration: none;
+}
+
+.blog-line {
+	display:flex;
+}
+@media (max-width: 428px){
+	.blog-line{
+		flex-direction: column;
+	}
 }
