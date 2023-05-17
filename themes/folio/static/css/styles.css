@@ -24,6 +24,9 @@ p>code{
 	background: lightgray;
 	padding: 2px 4px;
 }
+pre {
+	white-space: pre-wrap;
+}
 p { 
 	line-height: 1.5em;
 }
