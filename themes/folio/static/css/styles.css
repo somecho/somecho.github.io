@@ -20,7 +20,7 @@ article blockquote {
 	font-style: italic;
 	font-weight: 300;
 }
-article code{
+p>code{
 	background: lightgray;
 	padding: 2px 4px;
 }
