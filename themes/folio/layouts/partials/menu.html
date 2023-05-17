@@ -1,8 +1,14 @@
 <div class="menu">
 	<nav>
-		<ul>
+		<ul style="display: flex; align-items:baseline;">
+
 			{{ if not .IsHome }} 
 			<li><a href={{absLangURL "/"}} class="hover-link">⌂ {{ i18n "home" . }}</a></li>
+			{{ end }}
+			{{ if .IsHome}}
+			<li><a href="#blog" class="hover-link">✎ Blog</a></li>
+			{{else}}
+			<li><a href={{absLangURL "blog"}} class="hover-link">✎ Blog</a></li>
 			{{ end }}
 			<li><a href="#footer-nav" class="hover-link">↓ {{ i18n "menu" . }}</a></li>
 		</ul>
