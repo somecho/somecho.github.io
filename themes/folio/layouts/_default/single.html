@@ -6,6 +6,7 @@
 
 	{{.Content}}
 </article>
+<hr/>
 
 {{ $leader := "" }}
 {{ if eq .Page.Type "projects"}} {{ $leader = "seeallprojects"}}{{end}}
@@ -15,7 +16,6 @@
 	</a>
 </div>
 
-<hr/>
 
 
 {{end}}

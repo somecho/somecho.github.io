@@ -1,8 +1,8 @@
 {{ define "main"}}
 <h2>Tags</h2>
-<div class="tags-list">
+<div class="tags-section">
   {{ range $key, $value := .Data.Terms.ByCount }}
-  <span class="large-tag">
+  <span class="tag">
     <a href="{{ relLangURL "tags/" | relURL}}{{$value.Name | urlize}}">
       {{$value.Name}} | 
       {{ $value.Count}}

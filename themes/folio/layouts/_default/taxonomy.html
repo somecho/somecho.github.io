@@ -2,7 +2,6 @@
 <h2 style="font-weight: 200;">
   {{ i18n "projectswith" . }}{{.Data.Term}}
 </h2>
-{{ range .Data.Pages}}
-{{.Render "summary"}}
-{{end}}
+{{ $validPages := (where .Data.Pages "Type" "!=" "posts")}}
+{{ partial "list-projects" $validPages }}
 {{ end}}

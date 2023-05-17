@@ -5,24 +5,7 @@
 	{{ .Params.headline }}
 </h1>
 <div>
-	{{range .Pages }}
-	{{ $link := .Permalink}}
-	{{ if isset .Params "github" }} {{ $link = .Params.github  }} {{ end }}
-	<div class="listing">
-		<p class="listing-date">{{.Date.Format "02.01.2006"}}</p>
-		<h3>
-			<a href="{{ $link }}" class="hover-link">
-				{{.Params.emoji}} {{ .Title }}
-			</a>
-		</h3>
-		<p class="listing-summary"> {{ .Summary }} </p>
-		<div class="listing-leader">
-			<a href="{{ $link }}" class="listing-leader-link">
-				{{ i18n "readmore" . }} →
-			</a>
-		</div>
-	</div>
-	{{end}}
+	{{ partial "list-projects" .Pages }}
 </div>
 
 {{end}}
