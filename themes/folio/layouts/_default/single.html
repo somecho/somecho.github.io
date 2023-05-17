@@ -2,6 +2,7 @@
 <article style="margin: 48px 0">
 	<h3 class="post-year">{{  .Date.Format "02.01.2006" }}</h3>
 	<h2 class="post-title">{{.Params.emoji}} {{ .Title}}</h2>
+	<h3 style="margin-top: -10px;font-weight:300;font-size:1.25em;font-style:italic;">{{.Params.subtitle}}</h4>
 	{{ partial "tags-section" .Params.tags }}
 
 	{{.Content}}
@@ -10,6 +11,7 @@
 
 {{ $leader := "" }}
 {{ if eq .Page.Type "projects"}} {{ $leader = "seeallprojects"}}{{end}}
+{{ if eq .Page.Type "blog"}} {{ $leader = "seeallblogposts"}}{{end}}
 <div style="text-align: right;margin:12px 0;">
 	<a href={{ absLangURL .Page.Type }} class="hover-link">
 		{{ i18n $leader}} →

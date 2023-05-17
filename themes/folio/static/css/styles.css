@@ -8,6 +8,22 @@
 section{
 	margin: 48px 0;
 }
+article>p {
+	margin: 12px 0;
+}
+article>h4{
+	margin: 12px 0;
+}
+
+article blockquote {
+	margin: 0 24px;
+	font-style: italic;
+	font-weight: 300;
+}
+article code{
+	background: lightgray;
+	padding: 2px 4px;
+}
 p { 
 	line-height: 1.5em;
 }
@@ -205,6 +221,7 @@ h2 {
 }
 .img-container {
 	text-align: center;
+	margin: 24px 0;
 }
 .img-container>img {
 	max-width: 100%;
