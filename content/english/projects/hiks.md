@@ -3,12 +3,15 @@ title: "HiKS - Generative Design Tool"
 emoji: "🎴"
 date: 2022-09-06T09:31:31+01:00
 summary: "HiKS is a generative design tool developed and designed for the Swedish platform HiKS - Hitta Kliniska Studier. It was designed in collaboration with Swedish design firm BBDO Nordics."
+description: "HiKS is a generative design tool developed and designed for the Swedish platform HiKS - Hitta Kliniska Studier. It was designed in collaboration with Swedish design firm BBDO Nordics."
 tags: ["Vue","WebGL","WASM","JavaScript","p5.js","matter.js","electron"]
 thumbnail: "hiks.png"
 ---
 HiKS is a generative design tool developed and designed for the Swedish platform
 HiKS - Hitta Kliniska Studier, which makes clinical studies searchable. It was
-designed in collaboration with Swedish design firm BBDO Nordics. The tool
+designed in collaboration with Swedish design firm BBDO Nordics. 
+
+The tool
 features a stylized simulation of cells in a petri dish and was created using
 Vue(UI), Tailwind(CSS), [p5.js](https://p5s.org) + WebGL (graphics) and
 [matter.js](https://brm.io/matter-js) (soft body physics). The [WASM library

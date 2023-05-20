@@ -4,6 +4,7 @@ emoji: "📺"
 date: 2020-08-29T14:40:27+01:00
 tags: ["C++","Python","Keras","OpenFrameworks","Machine Learning","PureData"]
 summary: "Lokal/Digital ist eine interdisziplinäre Performance, die zeitgenössischen Tanz, freie Improvisation und Live-Audiovisuals durch den Einsatz von Machine Learning kombiniert."
+description: "Lokal/Digital ist eine interdisziplinäre Performance, die zeitgenössischen Tanz, freie Improvisation und Live-Audiovisuals durch den Einsatz von Machine Learning kombiniert."
 ---
 
 Lokal/Digital ist eine interdisziplinäre Performance, die zeitgenössischen

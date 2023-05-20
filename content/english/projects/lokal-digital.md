@@ -5,6 +5,7 @@ date: 2020-08-29T14:40:27+01:00
 showToc: true
 tags: ["C++","Python","Keras","OpenFrameworks","Machine Learning","PureData"]
 summary: "Lokal/Digital is a interdisciplinary performance combining contemporary dance, free improvisation and live audiovisuals enabled by machine learning. "
+description: "Lokal/Digital is a interdisciplinary performance combining contemporary dance, free improvisation and live audiovisuals enabled by machine learning. "
 ---
 
 Lokal/Digital is a interdisciplinary performance combining contemporary dance,

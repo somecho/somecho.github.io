@@ -1,15 +1,31 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
 <meta name="viewport" content="width=device-width,minimum-scale=1">
-<meta name="description" content="{{ with .Params.summary }}{{ . }}{{ else }}{{if .IsPage}}{{ .Params.summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;700&display=swap" rel="stylesheet">
+<meta name="google-site-verification" content="I7_ipCZgsTyD6K6mdDTVrdplh2qVWDN4sxASQcosthE" />
+
 <link rel="stylesheet" href="{{"/css/styles.css" | relURL}}">
 
 <meta name="twitter:card" content="summary">
 <meta name="twitter:creator" content="@sam___tsao">
-<meta property="og:url" content="{{.Permalink}}">
 
-<meta name="google-site-verification" content="I7_ipCZgsTyD6K6mdDTVrdplh2qVWDN4sxASQcosthE" />
+<meta property="og:url" content="{{.Permalink}}">
+<meta property="og:title" content="{{.Title}}">
+<meta property="og:description" content="{{.Params.description}}">
+{{ if .Params.thumbnail}}
+<meta property="og:image" content="{{  .Site.BaseURL }}thumbnails/{{ .Params.thumbnail }}">
+{{ end }}
+
+
+<title> {{ .Title }} </title>
+<meta name="description" content="{{ .Params.description }}">
+
+{{if .Params.github}}
+<script>
+	window.location.replace({{.Params.github}})
+</script>
+{{end}}
 

@@ -3,6 +3,7 @@ title: "Tan Bone - Begleit-Webanwendung"
 emoji: "🥣"
 date: 2021-02-05T14:14:43+01:00
 summary: "Tan Bone ist eine Kunstinstallation von LiLi (KSA) und Joshua Weitzel, für die ich eine Begleit-Webanwendung entwickelt habe."
+description: "Tan Bone ist eine Kunstinstallation von LiLi (KSA) und Joshua Weitzel, für die ich eine Begleit-Webanwendung entwickelt habe."
 tags: ["Vue","JavaScript","p5.js","howler.js"]
 ---
 
