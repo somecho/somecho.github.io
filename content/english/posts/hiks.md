@@ -1,1 +1,0 @@
-../english/projects/hiks.md
