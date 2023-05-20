@@ -1,9 +1,9 @@
 /* GLOBALS */
 *, html, body {
-  font-family: "Inter", sans-serif;
-  padding: 0px;
-  margin: 0px;
-  box-sizing: border-box;
+	font-family: "Inter", sans-serif;
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
 }
 section{
 	margin: 48px 0;
@@ -71,14 +71,14 @@ h2 {
 
 /* CIRCLE */
 #circle {
-  position: absolute;
-  width: 600px;
-  height: 600px;
-  background: var(--main-color);
-  left: -300px;
-  top: -300px;
-  border-radius: 600px;
-  z-index: -1;
+	position: absolute;
+	width: 600px;
+	height: 600px;
+	background: var(--main-color);
+	left: -300px;
+	top: -300px;
+	border-radius: 600px;
+	z-index: -1;
 }
 
 /* PROJECT CARDS */
@@ -335,5 +335,52 @@ sup a {
 @media (max-width: 428px){
 	.blog-line{
 		flex-direction: column;
+	}
+}
+
+/* TABLE OF CONTENTS / TOC */
+@media (min-width: 920px){
+	#TableOfContents {
+		position: fixed;
+		left: 0;
+		/* to center the nav on the left column */
+		transform: translateX(calc(-100% + 24.5vw - calc( calc(26vw - 100%) / 2) ));
+		border: solid 1px rgba(0,0,0,0.03);
+		border-radius: 12px;
+		padding: 16px;
+		transition: 5s;
+	}
+	#TableOfContents:hover {
+		transition: 5s;
+		border: solid 1px rgba(0,0,0,0.5);
+	}
+	#TableOfContents:hover a{
+		transition: 2s;
+		color: black;
+	}
+	#TableOfContents a {
+		transition: 2s;
+		color: rgba(0,0,0,0.25);
+		text-decoration: none;
+	}
+	#TableOfContents a:hover {
+		color: black;
+		text-decoration: underline;
+	}
+	#TableOfContents li{
+		font-weight: 500;
+		margin: 4px 0;
+	}
+	#TableOfContents li li {
+		font-weight: 200;
+		margin-left: 12px;
+	}
+	#TableOfContents li li li {
+		margin-left: 24px;
+	}
+}
+@media (max-width: 920px){
+	#TableOfContents {
+		display: none;
 	}
 }
