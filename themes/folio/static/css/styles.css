@@ -384,3 +384,14 @@ sup a {
 		display: none;
 	}
 }
+
+/* TABLE */
+article table {
+	margin: 24px auto;
+	border-collapse: collapse;
+}
+article th,td {
+	padding: 4px 8px;
+	text-align: center;
+	border: 1px solid black;
+}
