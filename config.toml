@@ -1,4 +1,4 @@
-baseURL = "v1.soch.cc"
+baseURL = "https://v1.soch.cc/"
 languageCode = "en-us"
 title = "Somē Cho"
 subtitle = "Fullstack Developer"
