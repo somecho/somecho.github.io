@@ -7,6 +7,7 @@ defaultContentLanguageInSubdir = true
 timeZone = "Europe/Berlin"
 
 theme = "folio"
+
 [languages]
 [languages.en]
 contentDir ='content/english'
